@@ -79,7 +79,7 @@
             color: #5c3d1e;
             font-weight: 500;
         }
-        .rsvp-button {
+        .wave-button {
             display: inline-block;
             background-color: #8b4513;
             color: #f4e1d2;
@@ -89,9 +89,22 @@
             font-weight: 600;
             margin-top: 20px;
             transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
-        .rsvp-button:hover {
+        .wave-button:hover {
             background-color: #5c3d1e;
+        }
+        .wave-button::after {
+            content: '👋';
+            position: absolute;
+            top: 50%;
+            left: 110%;
+            transform: translateY(-50%);
+            transition: left 0.3s ease;
+        }
+        .wave-button:hover::after {
+            left: 90%;
         }
         .footer {
             background-color: #f4e1d2;
@@ -147,7 +160,7 @@
                 </div>
             </div>
             
-            <a href="#" class="rsvp-button">RSVP Now</a>
+            <a href="https://maps.app.goo.gl/L1Tmz6gaDNRb8fmX8?g_st=iw" target="_blank" class="wave-button">Wave</a>
         </div>
         
         <div class="footer">
