@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Elegant Event Invitation</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Event Invitation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -11,9 +12,9 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Poppins', sans-serif;
             line-height: 1.6;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background-color: #f4f4f6;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -21,102 +22,104 @@
             padding: 20px;
         }
         .invitation-container {
-            max-width: 600px;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 450px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
             overflow: hidden;
-            perspective: 1000px;
-            transform-style: preserve-3d;
-            transition: all 0.8s ease;
+            text-align: center;
         }
         .invitation-header {
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
             color: white;
-            text-align: center;
             padding: 40px 20px;
             position: relative;
-            overflow: hidden;
-        }
-        .invitation-header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: rgba(255,255,255,0.1);
-            transform: rotate(-45deg);
         }
         .invitation-header h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 3rem;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 600;
         }
         .invitation-header p {
-            font-weight: 300;
-            font-size: 1.2rem;
+            font-size: 1rem;
             opacity: 0.9;
         }
-        .invitation-details {
-            padding: 40px 30px;
-            text-align: center;
+        .event-details {
+            padding: 30px 20px;
         }
         .event-icon {
             width: 100px;
             height: 100px;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            background: rgba(255,255,255,0.2);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 30px;
-            color: white;
+            margin: 0 auto 20px;
             font-size: 3rem;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
-        .event-details {
-            margin-bottom: 30px;
+        .detail-section {
+            background-color: #f9f9ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 0 15px 20px;
         }
-        .event-details h2 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
-            margin-bottom: 15px;
+        .detail-section h2 {
             color: #333;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
         }
-        .event-details p {
-            color: #666;
+        .detail-item {
             margin-bottom: 10px;
+            color: #666;
         }
         .rsvp-button {
             display: inline-block;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
             color: white;
             padding: 12px 30px;
             text-decoration: none;
             border-radius: 50px;
             font-weight: 600;
-            letter-spacing: 1px;
+            margin-top: 20px;
             transition: transform 0.3s ease;
         }
         .rsvp-button:hover {
             transform: scale(1.05);
         }
         .footer {
-            background: #f4f4f4;
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9rem;
-            color: #888;
+            background-color: #f1f1f1;
+            padding: 15px;
+            font-size: 0.8rem;
+            color: #666;
         }
-        @media (max-width: 600px) {
+        
+        @media screen and (max-width: 480px) {
             .invitation-container {
+                margin: 0;
                 width: 100%;
-                margin: 0 10px;
+                max-width: 100%;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+            }
+            .invitation-header {
+                padding: 30px 15px;
             }
             .invitation-header h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
+            }
+            .event-details {
+                padding: 20px 15px;
+            }
+            .detail-section {
+                margin: 0 10px 15px;
+                padding: 15px;
+            }
+            .rsvp-button {
+                padding: 10px 25px;
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -125,29 +128,33 @@
     <div class="invitation-container">
         <div class="invitation-header">
             <h1>You're Invited!</h1>
-            <p>Join us for an unforgettable evening</p>
+            <p>An Extraordinary Celebration Awaits</p>
         </div>
         
-        <div class="invitation-details">
+        <div class="event-details">
             <div class="event-icon">🎉</div>
             
-            <div class="event-details">
-                <h2>Spectacular Celebration</h2>
-                <p>
-                    <strong>Date:</strong> Saturday, September 15th, 2023<br>
-                    <strong>Time:</strong> 7:00 PM - 11:00 PM<br>
-                    <strong>Location:</strong> Grand Ballroom, Luxury Hotel
-                </p>
-                <p>
-                    Dress Code: Elegant Cocktail Attire
-                </p>
+            <div class="detail-section">
+                <h2>Event Details</h2>
+                <div class="detail-item">
+                    <strong>Date:</strong> Saturday, September 15, 2023
+                </div>
+                <div class="detail-item">
+                    <strong>Time:</strong> 7:00 PM - 11:00 PM
+                </div>
+                <div class="detail-item">
+                    <strong>Location:</strong> Grand Ballroom
+                </div>
+                <div class="detail-item">
+                    <strong>Dress Code:</strong> Elegant Cocktail
+                </div>
             </div>
             
             <a href="#" class="rsvp-button">RSVP Now</a>
         </div>
         
         <div class="footer">
-            © 2023 Elegant Events | Please RSVP by August 30th
+            © 2023 Elegant Events | RSVP by August 30th
         </div>
     </div>
 </body>
