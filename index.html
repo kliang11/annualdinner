@@ -4,68 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Annual Dinner Invitation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Arial, sans-serif';
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
+            background: linear-gradient(to bottom, #ffe6e6, #ffcccc);
+            font-family: 'Roboto', sans-serif;
         }
-        .card {
-            max-width: 600px;
+
+        .container {
+            max-width: 700px;
             margin: 50px auto;
-            padding: 20px;
-            background-color: #fff;
+            background: white;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
+            border-radius: 20px;
+            overflow: hidden;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .header {
+            background: linear-gradient(to right, #ff7eb3, #ff758c);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .header h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 48px;
+            margin: 0;
+        }
+
+        .content {
+            padding: 30px;
             text-align: center;
         }
-        .card h1 {
-            color: #ff6347;
-            font-size: 36px;
+
+        .content h2 {
+            font-size: 28px;
+            color: #333;
             margin-bottom: 20px;
         }
-        .card h2 {
-            color: #555;
-            font-size: 24px;
-        }
-        .card p {
+
+        .content p {
             font-size: 18px;
             line-height: 1.6;
+            color: #555;
         }
-        .card .button {
+
+        .content strong {
+            color: #ff758c;
+        }
+
+        .content .button {
             display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #ff6347;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 18px;
-            transition: background-color 0.3s ease;
-        }
-        .card .button:hover {
-            background-color: #e55347;
-        }
-        .footer {
             margin-top: 30px;
+            padding: 15px 25px;
+            background-color: #ff758c;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 10px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .content .button:hover {
+            transform: scale(1.1);
+            background-color: #e64c72;
+        }
+
+        .footer {
+            background: #f9f9f9;
+            text-align: center;
+            padding: 15px;
             font-size: 14px;
             color: #888;
+        }
+
+        .footer span {
+            color: #ff758c;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h1>You're Invited!</h1>
-        <h2>Annual Dinner 2025</h2>
-        <p>Join us for an evening of fun, food, and celebration!</p>
-        <p><strong>Date:</strong> Friday, 9th February 2025</p>
-        <p><strong>Time:</strong> 7:00 PM</p>
-        <p><strong>Venue:</strong> Grand Ballroom, XYZ Hotel</p>
-        <a href="https://your-rsvp-link.com" class="button">RSVP Now</a>
+    <div class="container">
+        <div class="header">
+            <h1>Annual Dinner 2025</h1>
+        </div>
+        <div class="content">
+            <h2>You're Invited!</h2>
+            <p>We are thrilled to invite you to our exclusive annual dinner. Let's celebrate together!</p>
+            <p><strong>Date:</strong> Friday, 9th February 2025</p>
+            <p><strong>Time:</strong> 7:00 PM</p>
+            <p><strong>Venue:</strong> Grand Ballroom, XYZ Hotel</p>
+            <a href="https://your-rsvp-link.com" class="button">RSVP Now</a>
+        </div>
         <div class="footer">
-            We look forward to seeing you there!
+            <p>Looking forward to celebrating with you! <span>Cheers!</span></p>
         </div>
     </div>
 </body>
