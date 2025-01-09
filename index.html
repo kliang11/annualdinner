@@ -2,117 +2,152 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Annual Dinner Invitation</title>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Elegant Event Invitation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body {
+        * {
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom, #ffe6e6, #ffcccc);
-            font-family: 'Roboto', sans-serif;
+            box-sizing: border-box;
         }
-
-        .container {
-            max-width: 700px;
-            margin: 50px auto;
-            background: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 20px;
-            overflow: hidden;
-            animation: fadeIn 1.5s ease-in-out;
-        }
-
-        .header {
-            background: linear-gradient(to right, #ff7eb3, #ff758c);
-            color: white;
-            text-align: center;
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
             padding: 20px;
         }
-
-        .header h1 {
-            font-family: 'Great Vibes', cursive;
-            font-size: 48px;
-            margin: 0;
+        .invitation-container {
+            max-width: 600px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            overflow: hidden;
+            perspective: 1000px;
+            transform-style: preserve-3d;
+            transition: all 0.8s ease;
         }
-
-        .content {
-            padding: 30px;
-            text-align: center;
-        }
-
-        .content h2 {
-            font-size: 28px;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        .content p {
-            font-size: 18px;
-            line-height: 1.6;
-            color: #555;
-        }
-
-        .content strong {
-            color: #ff758c;
-        }
-
-        .content .button {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 15px 25px;
-            background-color: #ff758c;
+        .invitation-header {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
             color: white;
-            text-decoration: none;
-            font-size: 18px;
-            border-radius: 10px;
-            transition: transform 0.3s, background-color 0.3s;
-        }
-
-        .content .button:hover {
-            transform: scale(1.1);
-            background-color: #e64c72;
-        }
-
-        .footer {
-            background: #f9f9f9;
             text-align: center;
-            padding: 15px;
-            font-size: 14px;
+            padding: 40px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .invitation-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255,255,255,0.1);
+            transform: rotate(-45deg);
+        }
+        .invitation-header h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .invitation-header p {
+            font-weight: 300;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        .invitation-details {
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .event-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            color: white;
+            font-size: 3rem;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .event-details {
+            margin-bottom: 30px;
+        }
+        .event-details h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .event-details p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .rsvp-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: transform 0.3s ease;
+        }
+        .rsvp-button:hover {
+            transform: scale(1.05);
+        }
+        .footer {
+            background: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
             color: #888;
         }
-
-        .footer span {
-            color: #ff758c;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: scale(0.9);
+        @media (max-width: 600px) {
+            .invitation-container {
+                width: 100%;
+                margin: 0 10px;
             }
-            to {
-                opacity: 1;
-                transform: scale(1);
+            .invitation-header h1 {
+                font-size: 2.5rem;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Annual Dinner 2025</h1>
+    <div class="invitation-container">
+        <div class="invitation-header">
+            <h1>You're Invited!</h1>
+            <p>Join us for an unforgettable evening</p>
         </div>
-        <div class="content">
-            <h2>You're Invited!</h2>
-            <p>We are thrilled to invite you to our exclusive annual dinner. Let's celebrate together!</p>
-            <p><strong>Date:</strong> Friday, 9th February 2025</p>
-            <p><strong>Time:</strong> 7:00 PM</p>
-            <p><strong>Venue:</strong> Grand Ballroom, XYZ Hotel</p>
-            <a href="https://your-rsvp-link.com" class="button">RSVP Now</a>
+        
+        <div class="invitation-details">
+            <div class="event-icon">🎉</div>
+            
+            <div class="event-details">
+                <h2>Spectacular Celebration</h2>
+                <p>
+                    <strong>Date:</strong> Saturday, September 15th, 2023<br>
+                    <strong>Time:</strong> 7:00 PM - 11:00 PM<br>
+                    <strong>Location:</strong> Grand Ballroom, Luxury Hotel
+                </p>
+                <p>
+                    Dress Code: Elegant Cocktail Attire
+                </p>
+            </div>
+            
+            <a href="#" class="rsvp-button">RSVP Now</a>
         </div>
+        
         <div class="footer">
-            <p>Looking forward to celebrating with you! <span>Cheers!</span></p>
+            © 2023 Elegant Events | Please RSVP by August 30th
         </div>
     </div>
 </body>
