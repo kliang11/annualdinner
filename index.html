@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Event Invitation</title>
+    <title>Baba Nyonya Annual Dinner Invitation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,9 +12,9 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             line-height: 1.6;
-            background-color: #f4f4f6;
+            background-color: #f4e1d2;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -24,19 +24,21 @@
         .invitation-container {
             width: 100%;
             max-width: 450px;
-            background-color: white;
+            background-color: #ffffff;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
             overflow: hidden;
             text-align: center;
+            border: 3px solid #8b4513;
         }
         .invitation-header {
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-            color: white;
-            padding: 40px 20px;
+            background-color: #8b4513;
+            color: #f4e1d2;
+            padding: 30px 20px;
             position: relative;
         }
         .invitation-header h1 {
+            font-family: 'Crimson Text', serif;
             font-size: 2.5rem;
             margin-bottom: 10px;
             font-weight: 600;
@@ -51,7 +53,7 @@
         .event-icon {
             width: 100px;
             height: 100px;
-            background: rgba(255,255,255,0.2);
+            background: rgba(139,69,19,0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -60,39 +62,42 @@
             font-size: 3rem;
         }
         .detail-section {
-            background-color: #f9f9ff;
+            background-color: #fff5e6;
             padding: 20px;
             border-radius: 10px;
             margin: 0 15px 20px;
+            border: 1px solid #8b4513;
         }
         .detail-section h2 {
-            color: #333;
+            color: #8b4513;
             margin-bottom: 15px;
-            font-size: 1.5rem;
+            font-family: 'Crimson Text', serif;
+            font-size: 1.8rem;
         }
         .detail-item {
             margin-bottom: 10px;
-            color: #666;
+            color: #5c3d1e;
+            font-weight: 500;
         }
         .rsvp-button {
             display: inline-block;
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-            color: white;
+            background-color: #8b4513;
+            color: #f4e1d2;
             padding: 12px 30px;
             text-decoration: none;
             border-radius: 50px;
             font-weight: 600;
             margin-top: 20px;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
         }
         .rsvp-button:hover {
-            transform: scale(1.05);
+            background-color: #5c3d1e;
         }
         .footer {
-            background-color: #f1f1f1;
+            background-color: #f4e1d2;
             padding: 15px;
             font-size: 0.8rem;
-            color: #666;
+            color: #8b4513;
         }
         
         @media screen and (max-width: 480px) {
@@ -100,26 +105,14 @@
                 margin: 0;
                 width: 100%;
                 max-width: 100%;
-                height: 100vh;
-                display: flex;
-                flex-direction: column;
-            }
-            .invitation-header {
-                padding: 30px 15px;
+                height: auto;
             }
             .invitation-header h1 {
                 font-size: 2rem;
             }
-            .event-details {
-                padding: 20px 15px;
-            }
             .detail-section {
                 margin: 0 10px 15px;
                 padding: 15px;
-            }
-            .rsvp-button {
-                padding: 10px 25px;
-                font-size: 0.9rem;
             }
         }
     </style>
@@ -127,26 +120,30 @@
 <body>
     <div class="invitation-container">
         <div class="invitation-header">
-            <h1>You're Invited!</h1>
-            <p>An Extraordinary Celebration Awaits</p>
+            <h1>Annual Dinner Invitation</h1>
+            <p>Baba Nyonya Celebration</p>
         </div>
         
         <div class="event-details">
-            <div class="event-icon">🎉</div>
+            <div class="event-icon">🏮</div>
             
             <div class="detail-section">
                 <h2>Event Details</h2>
                 <div class="detail-item">
-                    <strong>Date:</strong> Saturday, September 15, 2023
+                    <strong>Date:</strong> Friday, 17th January 2025
                 </div>
                 <div class="detail-item">
-                    <strong>Time:</strong> 7:00 PM - 11:00 PM
+                    <strong>Time:</strong> 6:00 PM - 10:00 PM
                 </div>
                 <div class="detail-item">
-                    <strong>Location:</strong> Grand Ballroom
+                    <strong>Venue:</strong> Babas Rootz
                 </div>
                 <div class="detail-item">
-                    <strong>Dress Code:</strong> Elegant Cocktail
+                    <strong>Address:</strong> 53a, Jln Awan Jawa, Taman Yarl,<br>
+                    58200 Kuala Lumpur, Wilayah Persekutuan
+                </div>
+                <div class="detail-item">
+                    <strong>Theme:</strong> Baba Nyonya Celebration
                 </div>
             </div>
             
@@ -154,7 +151,7 @@
         </div>
         
         <div class="footer">
-            © 2023 Elegant Events | RSVP by August 30th
+            © 2025 Annual Dinner | Kindly Confirm Your Attendance
         </div>
     </div>
 </body>
