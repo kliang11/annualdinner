@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annual Dinner Invitation</title>
+    <style>
+        body {
+            font-family: 'Arial, sans-serif';
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .card {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            text-align: center;
+        }
+        .card h1 {
+            color: #ff6347;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .card h2 {
+            color: #555;
+            font-size: 24px;
+        }
+        .card p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .card .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff6347;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+        .card .button:hover {
+            background-color: #e55347;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>You're Invited!</h1>
+        <h2>Annual Dinner 2025</h2>
+        <p>Join us for an evening of fun, food, and celebration!</p>
+        <p><strong>Date:</strong> Friday, 9th February 2025</p>
+        <p><strong>Time:</strong> 7:00 PM</p>
+        <p><strong>Venue:</strong> Grand Ballroom, XYZ Hotel</p>
+        <a href="https://your-rsvp-link.com" class="button">RSVP Now</a>
+        <div class="footer">
+            We look forward to seeing you there!
+        </div>
+    </div>
+</body>
+</html>
